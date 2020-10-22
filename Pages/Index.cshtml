@@ -1,0 +1,40 @@
+﻿@page
+
+<link href="/css/chat.css" rel="stylesheet" />
+
+
+<div class="row">&nbsp;</div>
+<div class="row text-center">
+    <div class="col">Användare</div>
+    <div class="col">
+        <input type="text" id="userInput" size="10" maxlength="16" />
+    </div>
+    <div class="col">
+        <input type="button" id="ApproveUser" class="btn btn-success" value="Godkänna" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr />
+    </div>
+</div>
+
+<div class="row" id="message_section" style="visibility:hidden">
+    <div class="message_section">
+        <div class="chat_area">
+            <ul id="messagesList" class="list-unstyled"></ul>
+        </div>
+        <div class="message_write">
+            <textarea class="form-control" id="messageInput" placeholder="Skriv ett meddelande"></textarea>
+            <div class="clearfix"></div>
+            <div class="chat_bottom text-center">
+                <input type="button" id="sendButton" class="btn btn-success" value="Skicka meddelande" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
